@@ -21,11 +21,11 @@ namespace ProdutosIeU
                 Console.Write("Nome: ");
                 string name = Console.ReadLine();
                 Console.Write("Price: ");
-                double price = double.Parse(Console.ReadLine());
+                double price = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
                 if (tipoProduto == 'I' || tipoProduto == 'i')
                 {
                     Console.Write("Taxa de Envio: ");
-                    double customsFee = double.Parse(Console.ReadLine());
+                    double customsFee = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
                     list.Add(new ImportedProduct(name, price, customsFee));
                 } 
                 else if(tipoProduto == 'U' || tipoProduto == 'u')
